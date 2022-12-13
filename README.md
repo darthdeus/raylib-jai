@@ -41,7 +41,12 @@ Windows 11 with Visual Studio 2022).
 
 ## Generating Bindings
 
-To generate the bindings simply run `jai generate.jai`.
+To generate the bindings simply run `jai generate.jai`. Generating the
+bindings is not required as the generated bindings are already in this
+repo. That being said since we're tracking Raylib 4.5-dev, which is
+essentially the master branch, there could be API changes. It's a good
+idea to re-generate the bindings after building Raylib and check `git
+diff` to see if any API changed.
 
 ## Examples
 
