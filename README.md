@@ -22,7 +22,22 @@ TODO:
 ## Building Raylib
 
 To build raylib from source simply run `make build-raylib`. Note that this
-requires `cmake` to be installed.
+requires `cmake` to be installed. This builds the full `libraylib.so` on
+Linux, but **on Windows this does not actually build Raylib**. Only a
+`raylib.sln` will be generated, which you need to open in Visual Studio,
+set the build target to `RelWithDebInfo`, right click the `raylib` project
+in the solution inspector, and click `Build`. If you want to build for a
+different target (say `Release` or `Debug`) simply edit the appropriate
+library path in `generate.jai` before generating the bindings, as Visual
+Studio outputs the `.lib/.dll` into a different directory.
+
+Generating the bindings and building examples works the same way on both
+Linux and Windows, the only additional step required on Windows is
+building `raylib` manually with Visual Studio.
+
+If you do not have the Visual C++ SDK installed, opening the `.sln` in
+Visual Studio should automatically prompt you to install it (tested on
+Windows 11 with Visual Studio 2022).
 
 ## Generating Bindings
 

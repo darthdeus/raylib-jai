@@ -19,9 +19,11 @@ generate_bindings :: () -> bool {
         #if OS == .WINDOWS {
             output_filename = "windows.jai";
             lib_name        = "raylib";
+            array_add(*libpaths, "raylib/build/raylib/RelWithDebInfo");
         } else #if OS == .LINUX {
             output_filename = "linux.jai";
             lib_name        = "libraylib";
+            array_add(*libpaths, "raylib/build/raylib/");
         } else #if OS == .MACOS {
             // @ToDo: Determine dynamically? Customize?
             array_add(*system_include_paths, "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include");
@@ -30,7 +32,6 @@ generate_bindings :: () -> bool {
             assert(false);
         }
 
-        array_add(*libpaths, "raylib/build/raylib/");
         array_add(*libnames, lib_name);
         array_add(*system_include_paths, GENERATOR_DEFAULT_SYSTEM_INCLUDE_PATH);
         array_add(*source_files,  "raylib/src/raylib.h");
