@@ -63,6 +63,34 @@ contains compiled binaries for all the examples in the project.
 <!-- raylib repo, and update the Jai versions based on the actual diff since the -->
 <!-- last time the examples were created. -->
 
+## Included Binaries
+
+This repo also embeds compiled binaries for Raylib. **I stronly recommend you
+build your own, do not trust random binaries found on the internet.** The
+binaries are embedded in the repository only for my own convenience, and not
+meant for others to use. I provide absolutely no guarantee about compiled
+library binaries in this repo. **Please use the above mentioned scripts to build
+Raylib yourself from source, it only takes a minute and you have a guarantee
+that there's no nasty stuff.**
+
+If you don't want to build Raylib yourself, you could try using the [official
+pre-compiled binaries from the Raylib
+Repo](https://github.com/raysan5/raylib/releases/tag/4.2.0). Note that you'll
+need to check-out the same version in the Raylib submodule as the binary you
+downloaded, otherwise things might not work. I'm happy to accept a PR that
+automates the process of downloading the precompiled binaries from official
+Raylib releases and generates the appropriate bindings.
+
+If someone figures out how to use Github Actions to build Jai code without
+exposing the private compiler I'd be happy to change this repo to build
+everything in CI and put it in Github Releases.
+
+I'm happy to accept a PR that implements Github Actions setup to build
+everything from source in a way that does not expose the compiler to the
+public.
+
+But until then, we're left to build everything from source.
+
 ## ORIGINAL README (TODO update)
 
 This binding is created using the `Bindings_Generator` module of the compiler,

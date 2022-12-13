@@ -1,6 +1,7 @@
 .PHONY: generate examples
 
-default: generate
+default: examples
+	./examples/basic_window
 
 examples:
 	jai examples/basic_window.jai
