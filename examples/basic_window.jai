@@ -1,4 +1,4 @@
-#import,file "../raylib.jai";
+#import,file "../module.jai";
 
 #import "Basic";
 
