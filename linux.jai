@@ -2143,4 +2143,4 @@ DetachAudioStreamProcessor :: (stream: AudioStream, processor: AudioCallback) ->
 #scope_file
 
 #import "Basic"; // For assert
-libraylib :: #foreign_library,no_dll "linux/libraylib";
+libraylib :: #library,no_dll "linux/libraylib";
