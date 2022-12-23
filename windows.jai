@@ -2143,4 +2143,4 @@ DetachAudioStreamProcessor :: (stream: AudioStream, processor: AudioCallback) ->
 #scope_file
 
 #import "Basic"; // For assert
-raylib :: #foreign_library,no_dll "raylib/build/raylib/RelWithDebInfo/raylib";
+raylib :: #library,no_dll "windows/raylib";
